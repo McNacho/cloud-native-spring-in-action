@@ -61,9 +61,15 @@ bootRun {
 
 bootBuildImage {
 	//builder = "docker.io/paketobuildpacks/builder-jammy-base"
-	builder = "gcr.io/paketo-buildpacks/azul-zulu"
+	builder = "bellsoft/buildpacks.builder:musl"
+
 	imageName = "${project.name}"
-	environment = ["BP_JVM_VERSION": "21.*"]
+	//environment = ["BP_JVM_VERSION": "21.0.4",
+				   //"JAVA_APP_SERVER": "liberty",
+	//			   "BP_JVM_TYPE": "JDK"]
+	//environment = ["BP_JVM_TYPE": "JRE"]
+	//environment = ["JAVA_APP_SERVER": "liberty"]
+
 
 //	docker {
 //		publishRegistry {
